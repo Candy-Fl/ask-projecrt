@@ -1,0 +1,204 @@
+.cruises__container {
+  margin-bottom: 120px;
+
+  @media(max-width: $vp-1365) {
+    margin-bottom: 100px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 60px;
+  }
+}
+
+.cruises__header {
+  text-align: center;
+  color: $color-tangora;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  margin-bottom: 60px;
+  margin-top: 134px;
+
+  @media (max-width: $vp-1365) {
+    margin-top: 100px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-top: 65px;
+    margin-bottom: 40px;
+  }
+}
+
+.cruises__list {
+  list-style: none;
+  margin: 0;
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
+
+  @media (max-width: $vp-1365) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: $vp-767) {
+    display: block;
+    padding: 0;
+    margin: 0 auto;
+    width: 270px;
+  }
+}
+
+.cruises__item {
+  width: 260px;
+  height: 386px;
+  background-color: $color-tangora;
+  color: $color-alice-blue;
+  background-position-x: center;
+  display: block;
+  position: relative;
+
+  @media (max-width: $vp-1365) {
+    width: 309px;
+  }
+
+  @media (max-width: $vp-767) {
+    width: 270px;
+    margin-bottom: 30px;
+  }
+
+  &:hover {
+    .cruises__name {
+      position: absolute;
+      z-index: 2;
+      top: 35px;
+      margin: 0;
+      left: 25px;
+
+      @media (max-width: $vp-1365) {
+        left: 35px;
+      }
+
+      @media (max-width: $vp-767) {
+        left: 25px;
+        padding-top: 0;
+      }
+    }
+
+    .cruises__description {
+      display: grid;
+      animation: cruises-slider 0.7s 1 both;
+    }
+  }
+}
+
+.cruises__item--astoria {
+  background-image: url('/img/content/astoria.jpg');
+}
+
+.cruises__item--eline {
+  background-image: url('/img/content/olimpia.jpg');
+}
+
+.cruises__item--odyssey {
+  background-image: url('/img/content/odyssey.jpg');
+}
+
+.cruises__item--atlantis {
+  background-image: url('/img/content/atlantis.jpg');
+}
+
+.cruises__item--olimpia {
+  background-image: url('/img/content/olimpia.jpg');
+}
+
+.cruises__item--avrora {
+  background-image: url('/img/content/avrora.jpg');
+}
+
+.cruises__item--lenor {
+  background-image: url('/img/content/lenor.jpg');
+}
+
+.cruises__item--minion {
+  background-image: url('/img/content/minion.jpg');
+}
+
+.cruises__name {
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0;
+  font-weight: 500;
+  margin-top: 343px;
+  margin-left: 30px;
+
+  @media (max-width: $vp-1365) {
+    margin-top: 338px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding-top: 348px;
+    margin-top: 0;
+  }
+}
+
+.cruises__description {
+  background-color: $color-tangora;
+  position: absolute;
+  top: 0;
+  width: fit-content;
+  height: 301px;
+  opacity: 0;
+  padding: 25px;
+  padding-top: 60px;
+
+
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: $color-quartz;
+    margin: 0;
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+  }
+
+  @media (max-width: $vp-1365) {
+    padding: 35px;
+    padding-top: 60px;
+    height: 291px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding: 25px;
+    padding-top: 73px;
+  }
+}
+.cruises__btn {
+  padding: 7px 46px 5px 47px;
+
+  @media (max-width: $vp-1365) {
+    padding-left: 61px;
+    padding-right: 61px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding-left: 51px;
+    padding-right: 52px;
+  }
+}
+
+@keyframes cruises-slider {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,223 @@
+.advantages {
+  background-image: url('/img/content/advantages-background-desktop.jpg');
+  height: 562px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $color-tangora;
+
+  @media (max-width: $vp-1365) {
+    background-image: url('/img/content/advantages-background-tablet.jpg');
+    height: 588px;
+  }
+
+  @media (max-width: $vp-767) {
+    background-image: url('/img/content/advantages-background-mobile.jpg');
+    height: 997px;
+  }
+}
+
+.advantages__header {
+  margin: 0;
+  font-size: 28px;
+  line-height: 42px;
+  text-align: center;
+  padding-top: 134px;
+  margin-bottom: 57px;
+
+  @media (max-width: $vp-1365) {
+    margin-bottom: 57px;
+    padding-top: 100px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 33px;
+    padding-top: 65px;
+  }
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: $color-tangora;
+
+  @media (max-width: $vp-767) {
+    display: block;
+  }
+}
+
+.advantages__item {
+  background-color: $color-alice-blue;
+  height: 241px;
+  width: 360px;
+  position: relative;
+
+  @media (max-width: $vp-1365) {
+    width: 206px;
+    height: 310px;
+  }
+
+  @media (max-width: $vp-767) {
+    width: 290px;
+    height: 249px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+}
+
+.advantages__item--ship {
+
+  .advantages__item-header {
+    margin-bottom: 21px;
+
+    &::before {
+      content: "";
+      background-image: url('/img/svg/icon-ship.svg');
+      width: 27px;
+      height: 32px;
+      position: absolute;
+      left: 20px;
+      top: 30px;
+    }
+  }
+
+  .advantages__item-description {
+    margin-right: 42px;
+    margin-bottom: 45px;
+  }
+
+  @media (max-width: $vp-1365) {
+    .advantages__item-header {
+      margin-bottom: 17px;
+
+      &::before {
+        width: 21px;
+        height: 26px;
+      }
+    }
+
+    .advantages__item-description {
+      margin-right: 32px;
+      margin-bottom: 25px;
+    }
+  }
+
+  @media (max-width: $vp-767) {
+    .advantages__item-description {
+      margin-right: 15px;
+    }
+  }
+}
+
+.advantages__item--all {
+  .advantages__item-header {
+    margin-bottom: 20px;
+
+
+    &::before {
+      content: "";
+      background-image: url('/img/svg/icon-all.svg');
+      width: 38px;
+      height: 21px;
+      position: absolute;
+      left: 20px;
+      top: 30px;
+    }
+  }
+
+  .advantages__item-description {
+    margin-right: 50px;
+    margin-bottom: 50px;
+  }
+
+  @media (max-width:$vp-1365) {
+    .advantages__item-header {
+      &::before {
+        width: 33px;
+        height: 19px;
+      }
+    }
+
+    .advantages__item-description {
+      margin-right: 24px;
+    }
+  }
+
+  @media (max-width: $vp-767) {
+    .advantages__item-description {
+      margin-right: 47px;
+    }
+  }
+}
+
+.advantages__item--tours {
+  .advantages__item-header {
+    margin-bottom: 16px;
+
+    &::before {
+      content: "";
+      background-image: url('/img/svg/icon-tours.svg');
+      width: 38px;
+      height: 21px;
+      position: absolute;
+      left: 20px;
+      top: 30px;
+    }
+  }
+
+  .advantages__item-description {
+    margin-right: 89px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width:$vp-1365) {
+    .advantages__item-header {
+      &::before {
+        height: 13px;
+      }
+    }
+
+    .advantages__item-description {
+      margin-right: 19px;
+    }
+  }
+
+  @media (max-width: $vp-767) {
+    .advantages__item-description {
+      margin-right: 37px;
+    }
+  }
+}
+
+.advantages__item-header {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  margin: 0;
+  margin-left: 20px;
+  margin-top: 87px;
+
+  &::before {
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  @media (max-width:$vp-1365) {
+    margin-top: 76px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-top: 0;
+    padding-top: 76px;
+  }
+}
+
+.advantages__item-description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  margin-left: 20px;
+}

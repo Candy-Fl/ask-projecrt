@@ -1,0 +1,75 @@
+.page-header {
+  background-image: url('/img/content/main-intro-background.jpg');
+  background-repeat: no-repeat;
+  height: 650px;
+  color: $color-alice-blue;
+  background-size: cover;
+  background-color: $color-prussian-blue;
+
+  @media (max-width: $vp-1365) {
+    background-image: url('/img/content/main-intro-background-tablet.jpg');
+    height: 638px;
+  }
+
+  @media (max-width: $vp-767) {
+    background-image: url('/img/content/main-intro-background-mobile.jpg');
+    height: 500px;
+  }
+}
+
+.page-header__container {
+  @media (max-width: $vp-767) {
+    padding-right: 0;
+  }
+}
+
+.page-header__intro {
+  margin-left: 95px;
+
+  @media (max-width: $vp-1365) {
+    margin-left: 0;
+  }
+
+  @media (max-width: $vp-767) {
+    text-align: left;
+  }
+}
+
+.page-header__header {
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 66px;
+  margin: 0;
+
+  br {
+    display: none;
+  }
+
+  @media (max-width: $vp-1365) {
+    font-size: 50px;
+    line-height: 61px;
+  }
+
+  @media (max-width: $vp-767) {
+    font-size: 36px;
+    line-height: 45px;
+
+    br {
+      display: block;
+    }
+  }
+}
+
+.page-header__description {
+  margin: 0;
+  margin-top: 19px;
+
+  @media (max-width: $vp-1365) {
+    margin-top: 17px;
+  }
+
+  @media (max-width: $vp-767) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
