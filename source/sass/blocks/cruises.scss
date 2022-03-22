@@ -57,6 +57,7 @@
   background-position-x: center;
   display: block;
   position: relative;
+  background-color: $color-blue-background;
 
   @media (max-width: $vp-1365) {
     width: 309px;

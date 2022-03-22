@@ -862,6 +862,7 @@ template {
   background-position-x: center;
   display: block;
   position: relative;
+  background-color: #89A5F9;
 }
 
 .cruises__item:hover .cruises__name {
@@ -977,6 +978,7 @@ template {
   height: 555px;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #89A5F9;
 }
 
 .booking__container {
