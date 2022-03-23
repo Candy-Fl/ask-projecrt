@@ -41,7 +41,7 @@
   line-height: 66px;
   margin: 0;
 
-  br {
+  .page-header__header-space {
     display: none;
   }
 
@@ -54,7 +54,7 @@
     font-size: 36px;
     line-height: 45px;
 
-    br {
+    .page-header__header-space {
       display: block;
     }
   }

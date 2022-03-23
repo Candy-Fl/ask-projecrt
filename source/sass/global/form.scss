@@ -39,14 +39,14 @@
   line-height: 27px;
   font-weight: 500;
 
-  br {
+  .form__header-space {
     display: none;
   }
 
   @media (max-width: $vp-767) {
     line-height: 25px;
 
-    br {
+    .form__header-space {
       display: block;
     }
   }
