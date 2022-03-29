@@ -386,7 +386,7 @@ template {
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../../fonts/Montserrat-Regular.woff2") format("woff2"), url("../../fonts/Montserrat-Regular.woff") format("woff");
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -394,7 +394,7 @@ template {
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../../fonts/Montserrat-Medium.woff2") format("woff2"), url("../../fonts/Montserrat-Medium.woff") format("woff");
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -402,7 +402,7 @@ template {
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../../fonts/Montserrat-SemiBold.woff") format("woff");
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -410,7 +410,7 @@ template {
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../../fonts/Montserrat-Bold.woff2") format("woff2"), url("../../fonts/Montserrat-Bold.woff") format("woff");
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -490,7 +490,7 @@ template {
   font-weight: 500;
 }
 
-.form__header br {
+.form__header .form__header-space {
   display: none;
 }
 
@@ -516,7 +516,7 @@ template {
 }
 
 .form__checkbox:checked::before {
-  background-image: url("/img/svg/checkbox.svg");
+  background-image: url("../img/svg/checkbox.svg");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
@@ -551,7 +551,7 @@ template {
 }
 
 .page-header {
-  background-image: url("/img/content/main-intro-background.jpg");
+  background-image: url("../img/content/main-intro-background.jpg");
   background-repeat: no-repeat;
   height: 650px;
   color: #F9FBFD;
@@ -570,7 +570,7 @@ template {
   margin: 0;
 }
 
-.page-header__header br {
+.page-header__header .page-header__header-space {
   display: none;
 }
 
@@ -593,7 +593,7 @@ template {
 .main-nav__logo {
   width: 70px;
   height: 38px;
-  background-image: url("/img/svg/logo-desktop.svg");
+  background-image: url("../img/svg/logo-desktop.svg");
 }
 
 .main-nav__list {
@@ -697,7 +697,7 @@ template {
   font-weight: 600;
 }
 
-.intro__header br {
+.intro__header .intro__header-space {
   display: none;
 }
 
@@ -712,8 +712,13 @@ template {
   height: 301px;
 }
 
+.intro__photo img {
+  width: 100%;
+  height: 100%;
+}
+
 .advantages {
-  background-image: url("/img/content/advantages-background-desktop.jpg");
+  background-image: url("../img/content/advantages-background-desktop.jpg");
   height: 562px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -757,12 +762,12 @@ template {
 
 .advantages__item--ship .advantages__item-header::before {
   content: "";
-  background-image: url("/img/svg/icon-ship.svg");
+  background-image: url("../img/svg/icon-ship.svg");
   width: 27px;
   height: 32px;
   position: absolute;
   left: 20px;
-  top: 30px;
+  top: 25px;
 }
 
 .advantages__item--ship .advantages__item-description {
@@ -776,7 +781,7 @@ template {
 
 .advantages__item--all .advantages__item-header::before {
   content: "";
-  background-image: url("/img/svg/icon-all.svg");
+  background-image: url("../img/svg/icon-all.svg");
   width: 38px;
   height: 21px;
   position: absolute;
@@ -795,7 +800,7 @@ template {
 
 .advantages__item--tours .advantages__item-header::before {
   content: "";
-  background-image: url("/img/svg/icon-tours.svg");
+  background-image: url("../img/svg/icon-tours.svg");
   width: 38px;
   height: 21px;
   position: absolute;
@@ -881,35 +886,35 @@ template {
 }
 
 .cruises__item--astoria {
-  background-image: url("/img/content/astoria.jpg");
+  background-image: url("../img/content/astoria.jpg");
 }
 
 .cruises__item--eline {
-  background-image: url("/img/content/olimpia.jpg");
+  background-image: url("../img/content/olimpia.jpg");
 }
 
 .cruises__item--odyssey {
-  background-image: url("/img/content/odyssey.jpg");
+  background-image: url("../img/content/odyssey.jpg");
 }
 
 .cruises__item--atlantis {
-  background-image: url("/img/content/atlantis.jpg");
+  background-image: url("../img/content/atlantis.jpg");
 }
 
 .cruises__item--olimpia {
-  background-image: url("/img/content/olimpia.jpg");
+  background-image: url("../img/content/olimpia.jpg");
 }
 
 .cruises__item--avrora {
-  background-image: url("/img/content/avrora.jpg");
+  background-image: url("../img/content/avrora.jpg");
 }
 
 .cruises__item--lenor {
-  background-image: url("/img/content/lenor.jpg");
+  background-image: url("../img/content/lenor.jpg");
 }
 
 .cruises__item--minion {
-  background-image: url("/img/content/minion.jpg");
+  background-image: url("../img/content/minion.jpg");
 }
 
 .cruises__name {
@@ -974,7 +979,7 @@ template {
 }
 
 .booking {
-  background-image: url("/img/content/booking-background-desktop.jpg");
+  background-image: url("../img/content/booking-background-desktop.jpg");
   height: 555px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1062,7 +1067,7 @@ template {
   width: 18px;
   height: 22px;
   position: absolute;
-  background-image: url("/img/svg/icon-map.svg");
+  background-image: url("../img/svg/icon-map.svg");
   left: 0;
 }
 
@@ -1080,7 +1085,7 @@ template {
   width: 18px;
   height: 18px;
   position: absolute;
-  background-image: url("/img/svg/icon-tel.svg");
+  background-image: url("../img/svg/icon-tel.svg");
   left: 0;
 }
 
@@ -1107,7 +1112,7 @@ template {
   width: 70px;
   height: 38px;
   display: block;
-  background-image: url("/img/svg/logo-desktop-open.svg");
+  background-image: url("../img/svg/logo-desktop-open.svg");
   background-repeat: no-repeat;
   margin-right: 40px;
 }
@@ -1143,19 +1148,19 @@ template {
 .social__item--twi {
   width: 20px;
   height: 16px;
-  background-image: url("/img/svg/icon-twi.svg");
+  background-image: url("../img/svg/icon-twi.svg");
 }
 
 .social__item--insta {
   width: 16px;
   height: 16px;
-  background-image: url("/img/svg/icon-insta.svg");
+  background-image: url("../img/svg/icon-insta.svg");
 }
 
 .social__item--meta {
   width: 9px;
   height: 16px;
-  background-image: url("/img/svg/icon-facebook.svg");
+  background-image: url("../img/svg/icon-facebook.svg");
 }
 
 .site__list {
@@ -1200,7 +1205,7 @@ template {
   }
 
   .page-header {
-    background-image: url("/img/content/main-intro-background-tablet.jpg");
+    background-image: url("../img/content/main-intro-background-tablet.jpg");
     height: 638px;
   }
 
@@ -1224,7 +1229,7 @@ template {
   .main-nav__logo {
     width: 38px;
     height: 20px;
-    background-image: url("/img/svg/logo-tablet.svg");
+    background-image: url("../img/svg/logo-tablet.svg");
   }
 
   .main-nav__list {
@@ -1247,7 +1252,7 @@ template {
     margin-bottom: 30px;
   }
 
-  .intro__header br {
+  .intro__header .intro__header-space {
     display: block;
   }
 
@@ -1257,7 +1262,7 @@ template {
   }
 
   .advantages {
-    background-image: url("/img/content/advantages-background-tablet.jpg");
+    background-image: url("../img/content/advantages-background-tablet.jpg");
     height: 588px;
   }
 
@@ -1343,7 +1348,7 @@ template {
   }
 
   .booking {
-    background-image: url("/img/content/booking-background-tablet.jpg");
+    background-image: url("../img/content/booking-background-tablet.jpg");
     height: 805px;
   }
 
@@ -1392,7 +1397,7 @@ template {
   }
 
   .page-footer__logo {
-    background-image: url("/img/svg/logo-tablet-open.svg");
+    background-image: url("../img/svg/logo-tablet-open.svg");
     margin-right: 25px;
     width: 38px;
     height: 20px;
@@ -1419,7 +1424,7 @@ template {
     line-height: 25px;
   }
 
-  .form__header br {
+  .form__header .form__header-space {
     display: block;
   }
 
@@ -1434,7 +1439,7 @@ template {
   }
 
   .page-header {
-    background-image: url("/img/content/main-intro-background-mobile.jpg");
+    background-image: url("../img/content/main-intro-background-mobile.jpg");
     height: 500px;
   }
 
@@ -1451,7 +1456,7 @@ template {
     line-height: 45px;
   }
 
-  .page-header__header br {
+  .page-header__header .page-header__header-space {
     display: block;
   }
 
@@ -1466,7 +1471,7 @@ template {
   }
 
   .main-nav__logo {
-    background-image: url("/img/svg/logo-mobile.svg");
+    background-image: url("../img/svg/logo-mobile.svg");
     width: 42px;
     height: 22px;
   }
@@ -1505,7 +1510,7 @@ template {
   }
 
   .main-nav--opened .main-nav__logo {
-    background-image: url("/img/svg/logo-mobile-open.svg");
+    background-image: url("../img/svg/logo-mobile-open.svg");
     z-index: 2;
     background-repeat: no-repeat;
     margin-top: 35px;
@@ -1529,7 +1534,7 @@ template {
   }
 
   .main-nav--opened .main-nav__toggle {
-    background-image: url("/img/svg/cross-nav.svg");
+    background-image: url("../img/svg/cross-nav.svg");
     z-index: 2;
     width: 15px;
     height: 15px;
@@ -1567,7 +1572,7 @@ template {
   }
 
   .advantages {
-    background-image: url("/img/content/advantages-background-mobile.jpg");
+    background-image: url("../img/content/advantages-background-mobile.jpg");
     height: 997px;
   }
 
@@ -1646,7 +1651,7 @@ template {
   }
 
   .booking {
-    background-image: url("/img/content/booking-background-mobile.jpg");
+    background-image: url("../img/content/booking-background-mobile.jpg");
     height: 760px;
   }
 

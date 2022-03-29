@@ -37,12 +37,12 @@
   width: 70px;
   height: 38px;
   display: block;
-  background-image: url('/img/svg/logo-desktop-open.svg');
+  background-image: url('../img/svg/logo-desktop-open.svg');
   background-repeat: no-repeat;
   margin-right: 40px;
 
   @media (max-width: $vp-1365) {
-    background-image: url('/img/svg/logo-tablet-open.svg');
+    background-image: url('../img/svg/logo-tablet-open.svg');
     margin-right: 25px;
     width: 38px;
     height: 20px;

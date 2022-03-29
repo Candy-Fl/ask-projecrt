@@ -17,16 +17,16 @@
 .main-nav__logo {
   width: 70px;
   height: 38px;
-  background-image: url('/img/svg/logo-desktop.svg');
+  background-image: url('../img/svg/logo-desktop.svg');
 
   @media (max-width: $vp-1365) {
     width: 38px;
     height: 20px;
-    background-image: url('/img/svg/logo-tablet.svg');
+    background-image: url('../img/svg/logo-tablet.svg');
   }
 
   @media (max-width: $vp-767) {
-    background-image: url('/img/svg/logo-mobile.svg');
+    background-image: url('../img/svg/logo-mobile.svg');
     width: 42px;
     height: 22px;
   }
@@ -124,7 +124,7 @@
     padding-top: 0;
 
     .main-nav__logo {
-      background-image: url('/img/svg/logo-mobile-open.svg');
+      background-image: url('../img/svg/logo-mobile-open.svg');
       z-index: 2;
       background-repeat: no-repeat;
       margin-top: 35px;
@@ -148,7 +148,7 @@
     }
 
     .main-nav__toggle {
-      background-image: url('/img/svg/cross-nav.svg');
+      background-image: url('../img/svg/cross-nav.svg');
       z-index: 2;
       width: 15px;
       height: 15px;

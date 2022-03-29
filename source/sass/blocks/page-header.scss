@@ -1,5 +1,5 @@
 .page-header {
-  background-image: url('/img/content/main-intro-background.jpg');
+  background-image: url('../img/content/main-intro-background.jpg');
   background-repeat: no-repeat;
   height: 650px;
   color: $color-alice-blue;
@@ -7,12 +7,12 @@
   background-color: $color-prussian-blue;
 
   @media (max-width: $vp-1365) {
-    background-image: url('/img/content/main-intro-background-tablet.jpg');
+    background-image: url('../img/content/main-intro-background-tablet.jpg');
     height: 638px;
   }
 
   @media (max-width: $vp-767) {
-    background-image: url('/img/content/main-intro-background-mobile.jpg');
+    background-image: url('../img/content/main-intro-background-mobile.jpg');
     height: 500px;
   }
 }

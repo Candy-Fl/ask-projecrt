@@ -1,17 +1,17 @@
 .booking {
-  background-image: url('/img/content/booking-background-desktop.jpg');
+  background-image: url('../img/content/booking-background-desktop.jpg');
   height: 555px;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: $color-blue-background;
 
   @media (max-width: $vp-1365) {
-    background-image: url('/img/content/booking-background-tablet.jpg');
+    background-image: url('../img/content/booking-background-tablet.jpg');
     height: 805px;
   }
 
   @media (max-width: $vp-767) {
-    background-image: url('/img/content/booking-background-mobile.jpg');
+    background-image: url('../img/content/booking-background-mobile.jpg');
     height: 760px;
   }
 }
