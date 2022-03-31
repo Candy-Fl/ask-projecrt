@@ -12,10 +12,10 @@
   }
 
   @media (max-width: $vp-767) {
-    margin: 65px 0;
     grid-template-columns: 1fr;
     grid-gap: 43px;
     height: 573px;
+    margin: 58px 0 72px;
   }
 }
 
@@ -35,7 +35,7 @@
 
 .contacts__info {
   text-decoration: none;
-  margin-top: 81px;
+  margin-top: 75px;
   color: $color-tangora;
 
   @media (max-width: $vp-1365) {
@@ -52,11 +52,11 @@
   font-size: 18px;
   line-height: 27px;
   font-weight: 500;
-  margin: 0;
-  margin-bottom: 42px;
+  margin: 0 0 32px;
 
   @media (max-width: $vp-767) {
-    margin-bottom: 38px;
+    margin-bottom: 27px;
+    margin-right: 10px;
   }
 }
 
@@ -67,7 +67,7 @@
 
 .contacts__info-adress {
   font-style: normal;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   position: relative;
   padding-left: 28px;
   font-size: 16px;
@@ -80,6 +80,16 @@
     position: absolute;
     background-image: url('../img/svg/icon-map.svg');
     left: 0;
+  }
+
+  @media (max-width: $vp-1365) {
+    margin-right: 34px;
+  }
+
+  @media (max-width: $vp-767) {
+    &::before {
+      top: 5px;
+    }
   }
 }
 

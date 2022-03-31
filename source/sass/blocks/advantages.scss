@@ -17,21 +17,23 @@
 }
 
 .advantages__header {
-  margin: 0;
   font-size: 28px;
   line-height: 42px;
   text-align: center;
-  padding-top: 134px;
-  margin-bottom: 57px;
+  padding-top: 125px;
+  margin: 0 0 50px;
 
   @media (max-width: $vp-1365) {
-    margin-bottom: 57px;
-    padding-top: 100px;
+    padding-top: 90px;
+    font-size: 26px;
+    line-height: 39px;
   }
 
   @media (max-width: $vp-767) {
-    margin-bottom: 33px;
-    padding-top: 65px;
+    margin-bottom: 30px;
+    padding-top: 58px;
+    font-size: 24px;
+    line-height: 36px;
   }
 }
 
@@ -54,6 +56,7 @@
   height: 241px;
   width: 360px;
   position: relative;
+  color: $color-tangora;
 
   @media (max-width: $vp-1365) {
     width: 206px;
@@ -86,12 +89,11 @@
 
   .advantages__item-description {
     margin-right: 42px;
-    margin-bottom: 45px;
   }
 
   @media (max-width: $vp-1365) {
     .advantages__item-header {
-      margin-bottom: 17px;
+      margin-bottom: 10px;
 
       &::before {
         width: 21px;
@@ -135,6 +137,8 @@
 
   @media (max-width:$vp-1365) {
     .advantages__item-header {
+      margin-bottom: 5px;
+
       &::before {
         width: 33px;
         height: 19px;
@@ -175,6 +179,8 @@
 
   @media (max-width:$vp-1365) {
     .advantages__item-header {
+      margin-bottom: 5px;
+
       &::before {
         height: 13px;
       }
@@ -206,12 +212,14 @@
   }
 
   @media (max-width:$vp-1365) {
-    margin-top: 76px;
+    margin-top: 70px;
   }
 
   @media (max-width: $vp-767) {
     margin-top: 0;
-    padding-top: 76px;
+    padding-top: 69px;
+    line-height: 25px;
+    padding-right: 70px;
   }
 }
 

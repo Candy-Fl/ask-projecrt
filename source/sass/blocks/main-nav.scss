@@ -2,14 +2,17 @@
   display: flex;
   justify-content: space-between;
   padding-top: 35px;
-  margin-bottom: 210px;
+  margin-bottom: 197px;
+  align-items: center;
 
   @media (max-width: $vp-1365) {
-    margin-bottom: 235px;
+    padding-top: 30px;
+    margin-bottom: 218px;
   }
 
   @media (max-width: $vp-767) {
-    margin-bottom: 143px;
+    padding-top: 20px;
+    margin-bottom: 133px;
     position: relative;
   }
 }
@@ -125,22 +128,23 @@
 
     .main-nav__logo {
       background-image: url('../img/svg/logo-mobile-open.svg');
-      z-index: 2;
+      z-index: 3;
+      margin-left: 35px;
       background-repeat: no-repeat;
-      margin-top: 35px;
-      margin-left: 15px;
+      top: 20px;
+      position: absolute;
     }
 
     .main-nav__list {
       display: block;
-      position: absolute;
       padding: 75px 30px 0 15px;
       width: 100%;
       height: 493px;
+      margin-left: 20px;
     }
 
     .main-nav__item {
-      padding: 10px 85px 8px 10px;
+      padding: 10px 0 8px 10px;
 
       &:last-child {
         margin-bottom: 0;
@@ -152,7 +156,7 @@
       z-index: 2;
       width: 15px;
       height: 15px;
-      margin-top: 35px;
+      top: 25px;
 
       &::before {
         display: none;

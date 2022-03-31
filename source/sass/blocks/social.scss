@@ -8,6 +8,7 @@
 
   @media (max-width: $vp-767) {
     width: max-content;
+    grid-gap: 17px;
   }
 }
 
@@ -21,17 +22,32 @@
   width: 20px;
   height: 16px;
   background-image: url('../img/svg/icon-twi.svg');
+
+  @media (max-width: $vp-1365) {
+    width: 16px;
+    height: 13px;
+  }
 }
 
 .social__item--insta {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   background-image: url('../img/svg/icon-insta.svg');
+
+  @media (max-width: $vp-1365) {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 
 .social__item--meta {
-  width: 9px;
-  height: 16px;
+  width: 11px;
+  height: 20px;
   background-image: url('../img/svg/icon-facebook.svg');
+
+  @media (max-width: $vp-1365) {
+    width: 9px;
+    height: 16px;
+  }
 }
