@@ -16,6 +16,12 @@
   display: block;
   background-repeat: no-repeat;
   background-size: contain;
+
+  &:focus,
+  &:hover {
+    border-bottom: 1px solid $color-alice-blue;
+    padding-bottom: 5px;
+  }
 }
 
 .social__item--twi {
@@ -23,7 +29,7 @@
   height: 16px;
   background-image: url('../img/svg/icon-twi.svg');
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     width: 16px;
     height: 13px;
   }
@@ -34,7 +40,7 @@
   height: 20px;
   background-image: url('../img/svg/icon-insta.svg');
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     width: 16px;
     height: 16px;
   }
@@ -46,7 +52,7 @@
   height: 20px;
   background-image: url('../img/svg/icon-facebook.svg');
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     width: 9px;
     height: 16px;
   }

@@ -4,7 +4,7 @@
   margin: 0;
   margin-right: 350px;
 
-  @media (max-width:$vp-1365) {
+  @media (max-width:$vp-1023) {
     margin-right: 87px;
   }
 
@@ -29,7 +29,7 @@
     font-weight: 400;
   }
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     margin-right: 19px;
 
     a {

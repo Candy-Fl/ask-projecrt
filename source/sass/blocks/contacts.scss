@@ -5,7 +5,7 @@
   margin: 120px auto;
   height: 306px;
 
-  @media (max-width:$vp-1365) {
+  @media (max-width:$vp-1023) {
     grid-gap: 30px;
     margin: 100px 0;
     height: 335px;
@@ -23,13 +23,14 @@
   width: 560px;
   height: 100%;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     width: 324px;
   }
 
   @media (max-width: $vp-767) {
     width: 290px;
     height: 316px;
+    margin: 0 auto;
   }
 }
 
@@ -38,7 +39,7 @@
   margin-top: 75px;
   color: $color-tangora;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     margin-top: 72px;
   }
 
@@ -82,7 +83,7 @@
     left: 0;
   }
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     margin-right: 34px;
   }
 

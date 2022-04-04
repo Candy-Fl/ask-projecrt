@@ -1,7 +1,7 @@
 .intro {
   padding: 120px 0 106px;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     padding: 100px 0 80px;
   }
 
@@ -16,7 +16,7 @@
   grid-gap: 88px;
   color: $color-tangora;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     grid-gap: 30px;
   }
 
@@ -36,7 +36,7 @@
     display: none;
   }
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     font-size: 26px;
     line-height: 36px;
     margin-bottom: 20px;
@@ -68,7 +68,7 @@
   width: 560px;
   height: 301px;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     width: 324px;
     height: 264px;
   }

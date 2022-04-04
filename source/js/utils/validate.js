@@ -17,6 +17,18 @@ function validate() {
 
   const tel = document.querySelector('.form__input--tel');
   const email = document.querySelector('.form__input--email');
+  const buttonSumbit = document.querySelector('.form__btn');
+  const checkbox = document.querySelector('.booking__checkbox ');
+  const checkboxContainer = document.querySelector('.form__checkbox--container');
+
+  buttonSumbit.addEventListener('click', (e) => {
+    if (checkbox.checked) {
+      checkboxContainer.classList.remove('form__checkbox--container-good');
+      return;
+    }
+    e.preventDefault();
+    checkboxContainer.classList.add('form__checkbox--container-good');
+  });
 
   check(tel, regex);
   check(email, re);

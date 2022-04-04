@@ -5,7 +5,7 @@
   background-size: cover;
   color: $color-tangora;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     background-image: url('../img/content/advantages-background-tablet.jpg');
     height: 588px;
   }
@@ -23,7 +23,7 @@
   padding-top: 125px;
   margin: 0 0 50px;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     padding-top: 90px;
     font-size: 26px;
     line-height: 39px;

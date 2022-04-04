@@ -5,7 +5,7 @@
   background-size: cover;
   background-color: $color-blue-background;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     background-image: url('../img/content/booking-background-tablet.jpg');
     height: 805px;
   }
@@ -21,7 +21,7 @@
   padding: 0 163px;
   justify-content: space-between;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     display: block;
     text-align: center;
     padding: 88px 174px 100px;
@@ -38,7 +38,7 @@
   color: $color-tangora;
   margin-top: 213px;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     margin-top: 0;
   }
 }
@@ -50,7 +50,7 @@
   margin: 0;
   margin-bottom: 8px;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     margin-bottom: 5px;
     font-size: 34px;
     line-height: 51px;
@@ -82,7 +82,7 @@
 .booking__form {
   margin-top: 50px;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1023) {
     margin: 53px auto 0;
   }
 

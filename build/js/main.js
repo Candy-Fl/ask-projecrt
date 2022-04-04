@@ -180,6 +180,18 @@ function validate() {
 
   var tel = document.querySelector('.form__input--tel');
   var email = document.querySelector('.form__input--email');
+  var buttonSumbit = document.querySelector('.form__btn');
+  var checkbox = document.querySelector('.booking__checkbox ');
+  var checkboxContainer = document.querySelector('.form__checkbox--container');
+  buttonSumbit.addEventListener('click', function (e) {
+    if (checkbox.checked) {
+      checkboxContainer.classList.remove('form__checkbox--container-good');
+      return;
+    }
+
+    e.preventDefault();
+    checkboxContainer.classList.add('form__checkbox--container-good');
+  });
   check(tel, regex);
   check(email, re);
 }
