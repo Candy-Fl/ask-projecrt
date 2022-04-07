@@ -125,6 +125,14 @@
 .main-nav--opened {
   @media(max-width: $vp-767) {
     padding-top: 0;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+
+    .main-nav__list-wrapper {
+      background-color: $color-overlay;
+      padding-left: 35px;
+    }
 
     .main-nav__logo {
       background-image: url('../img/svg/logo-mobile-open.svg');
@@ -158,6 +166,7 @@
       width: 15px;
       height: 15px;
       top: 25px;
+      background-repeat: no-repeat;
 
       &::before {
         display: none;

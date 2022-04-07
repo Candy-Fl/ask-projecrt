@@ -97,6 +97,8 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_toggle_nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/toggle-nav */ "./js/utils/toggle-nav.js");
 /* harmony import */ var _utils_validate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/validate */ "./js/utils/validate.js");
+/* harmony import */ var _utils_close_nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utils/close-nav */ "./js/utils/close-nav.js");
+
 
  // ---------------------------------
 
@@ -104,7 +106,8 @@ window.addEventListener('DOMContentLoaded', function () {
   // Utils
   // ---------------------------------
   Object(_utils_toggle_nav__WEBPACK_IMPORTED_MODULE_0__["toggleNav"])();
-  Object(_utils_validate__WEBPACK_IMPORTED_MODULE_1__["validate"])(); // Modules
+  Object(_utils_validate__WEBPACK_IMPORTED_MODULE_1__["validate"])();
+  Object(_utils_close_nav__WEBPACK_IMPORTED_MODULE_2__["closeNav"])(); // Modules
   // ---------------------------------
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
@@ -126,6 +129,30 @@ window.addEventListener('DOMContentLoaded', function () {
 // breakpoint.addListener(breakpointChecker);
 // breakpointChecker();
 // используйте .closest(el)
+
+/***/ }),
+
+/***/ "./js/utils/close-nav.js":
+/*!*******************************!*\
+  !*** ./js/utils/close-nav.js ***!
+  \*******************************/
+/*! exports provided: closeNav */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "closeNav", function() { return closeNav; });
+function closeNav() {
+  var nav = document.querySelector('.main-nav');
+  var links = document.querySelectorAll('.main-nav__link');
+  links.forEach(function (link) {
+    link.addEventListener('click', function () {
+      nav.classList.remove('main-nav--opened');
+    });
+  });
+}
+
+
 
 /***/ }),
 

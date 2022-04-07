@@ -386,7 +386,7 @@ template {
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.svg") format("svg");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -394,7 +394,7 @@ template {
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium.svg") format("svg");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -402,7 +402,7 @@ template {
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff"), url("../fonts/Montserrat-SemiBold.svg") format("svg");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -410,7 +410,7 @@ template {
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.svg") format("svg");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -475,6 +475,7 @@ template {
   line-height: 21px;
   color: rgba(1, 28, 64, 0.7);
   border: none;
+  border-radius: 0;
   outline: none;
 }
 
@@ -1311,6 +1312,10 @@ template {
     padding: 73px 36px 22px 35px;
     height: 291px;
   }
+
+  .site__list {
+    margin-right: 87px;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -1479,10 +1484,6 @@ template {
     height: 16px;
   }
 
-  .site__list {
-    margin-right: 87px;
-  }
-
   .site__item {
     margin-right: 19px;
   }
@@ -1542,6 +1543,8 @@ template {
 
   .page-header__intro {
     text-align: left;
+    position: absolute;
+    top: 175px;
   }
 
   .page-header__header {
@@ -1602,6 +1605,14 @@ template {
 
   .main-nav--opened {
     padding-top: 0;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+  }
+
+  .main-nav--opened .main-nav__list-wrapper {
+    background-color: rgba(0, 43, 102, 0.5);
+    padding-left: 35px;
   }
 
   .main-nav--opened .main-nav__logo {
@@ -1638,6 +1649,7 @@ template {
     width: 15px;
     height: 15px;
     top: 25px;
+    background-repeat: no-repeat;
   }
 
   .main-nav--opened .main-nav__toggle::before {

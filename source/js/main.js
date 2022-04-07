@@ -1,5 +1,6 @@
 import {toggleNav} from './utils/toggle-nav';
 import {validate} from './utils/validate';
+import {closeNav} from './utils/close-nav';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -9,6 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   toggleNav();
   validate();
+  closeNav();
   // Modules
   // ---------------------------------
 
