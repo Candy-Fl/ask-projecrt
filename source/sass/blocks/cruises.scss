@@ -20,7 +20,7 @@
   margin-top: 125px;
 
   @media (max-width: $vp-1023) {
-    margin-top: 90px;
+    margin-top: 91px;
     font-size: 26px;
     line-height: 39px;
   }
@@ -53,6 +53,8 @@
   }
 }
 
+
+
 .cruises__item {
   width: 260px;
   height: 386px;
@@ -62,8 +64,9 @@
   display: block;
   position: relative;
   background-color: $color-blue-background;
+  margin: 0 auto;
 
-  @media (max-width: $vp-1365) {
+  @media (max-width: $vp-1024) {
     width: 309px;
     margin: 0 auto;
   }
@@ -101,36 +104,125 @@
   }
 }
 
+.cruises__item--opened {
+  .cruises__name {
+    position: absolute;
+    z-index: 2;
+    top: 35px;
+    margin: 0;
+    left: 25px;
+
+    @media (max-width: $vp-1023) {
+      left: 35px;
+    }
+
+    @media (max-width: $vp-767) {
+      left: 25px;
+      padding-top: 0;
+    }
+  }
+
+  .cruises__description {
+    display: grid;
+    animation: cruises-slider 0.7s 1 both;
+    box-shadow: 1px 4px 35px $color-cruise-shadow;
+  }
+}
+
 .cruises__item--astoria {
-  background-image: url('../img/content/astoria.jpg');
+  background-image: url('../img/content/astoria-desktop.jpg');
+
+  @media (max-width: $vp-1365) {
+    background-image: url('../img/content/astoria.jpg');
+  }
+
+  @media (max-width: $vp-767) {
+    background-image: url('../img/content/astoria-mobile.jpg');
+  }
 }
 
 .cruises__item--eline {
-  background-image: url('../img/content/olimpia.jpg');
+  background-image: url('../img/content/olimpia-desktop.jpg');
+
+  @media (max-width: $vp-1365) {
+    background-image: url('../img/content/olimpia.jpg');
+  }
+
+  @media (max-width: $vp-767) {
+    background-image: url('../img/content/olimpia-mobile.jpg');
+  }
 }
 
 .cruises__item--odyssey {
-  background-image: url('../img/content/odyssey.jpg');
+  background-image: url('../img/content/odyssey-desktop.jpg');
+
+  @media (max-width: $vp-1365) {
+    background-image: url('../img/content/odyssey.jpg');
+  }
+
+  @media (max-width: $vp-767) {
+    background-image: url('../img/content/odyssey-mobile.jpg');
+  }
 }
 
 .cruises__item--atlantis {
-  background-image: url('../img/content/atlantis.jpg');
+  background-image: url('../img/content/atlantis-desktop.jpg');
+
+  @media (max-width: $vp-1365) {
+    background-image: url('../img/content/atlantis.jpg');
+  }
+
+  @media (max-width: $vp-767) {
+    background-image: url('../img/content/atlantis-mobile.jpg');
+  }
 }
 
 .cruises__item--olimpia {
-  background-image: url('../img/content/olimpia.jpg');
+  background-image: url('../img/content/olimpia-desktop.jpg');
+
+  @media (max-width: $vp-1365) {
+    background-image: url('../img/content/olimpia.jpg');
+  }
+
+  @media (max-width: $vp-767) {
+    background-image: url('../img/content/olimpia-mobile.jpg');
+  }
 }
 
 .cruises__item--avrora {
-  background-image: url('../img/content/avrora.jpg');
+  background-image: url('../img/content/avrora-desktop.jpg');
+
+  @media (max-width: $vp-1365) {
+    background-image: url('../img/content/avrora.jpg');
+  }
+
+  @media (max-width: $vp-767) {
+    background-image: url('../img/content/avrora-mobile.jpg');
+  }
 }
 
 .cruises__item--lenor {
-  background-image: url('../img/content/lenor.jpg');
+  background-image: url('../img/content/lenor-desktop.jpg');
+
+  @media (max-width: $vp-1365) {
+    background-image: url('../img/content/lenor.jpg');
+  }
+
+  @media (max-width: $vp-767) {
+    background-image: url('../img/content/lenor-mobile.jpg');
+  }
 }
 
 .cruises__item--minion {
-  background-image: url('../img/content/minion.jpg');
+  background-image: url('../img/content/minion-mobile.jpg');
+
+  @media (max-width: $vp-1365) {
+    background-image: url('../img/content/minion.jpg');
+  }
+
+  @media (max-width: $vp-767) {
+    background-image: url('../img/content/minion-mobile.jpg');
+  }
 }
 
 .cruises__name {
@@ -142,12 +234,14 @@
   margin-left: 30px;
 
   @media (max-width: $vp-1023) {
-    margin-top: 338px;
+    margin-top: 332px;
+    margin-left: 35px;
   }
 
   @media (max-width: $vp-767) {
-    padding-top: 348px;
+    padding-top: 342px;
     margin-top: 0;
+    margin-left: 26px;
   }
 }
 

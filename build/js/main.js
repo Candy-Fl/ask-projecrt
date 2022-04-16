@@ -98,6 +98,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_toggle_nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/toggle-nav */ "./js/utils/toggle-nav.js");
 /* harmony import */ var _utils_validate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/validate */ "./js/utils/validate.js");
 /* harmony import */ var _utils_close_nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utils/close-nav */ "./js/utils/close-nav.js");
+/* harmony import */ var _utils_focus__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./utils/focus */ "./js/utils/focus.js");
+
 
 
  // ---------------------------------
@@ -107,7 +109,8 @@ window.addEventListener('DOMContentLoaded', function () {
   // ---------------------------------
   Object(_utils_toggle_nav__WEBPACK_IMPORTED_MODULE_0__["toggleNav"])();
   Object(_utils_validate__WEBPACK_IMPORTED_MODULE_1__["validate"])();
-  Object(_utils_close_nav__WEBPACK_IMPORTED_MODULE_2__["closeNav"])(); // Modules
+  Object(_utils_close_nav__WEBPACK_IMPORTED_MODULE_2__["closeNav"])();
+  Object(_utils_focus__WEBPACK_IMPORTED_MODULE_3__["focus"])(); // Modules
   // ---------------------------------
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
@@ -150,6 +153,42 @@ function closeNav() {
       nav.classList.remove('main-nav--opened');
     });
   });
+}
+
+
+
+/***/ }),
+
+/***/ "./js/utils/focus.js":
+/*!***************************!*\
+  !*** ./js/utils/focus.js ***!
+  \***************************/
+/*! exports provided: focus */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "focus", function() { return focus; });
+var buttons = document.querySelectorAll('.cruises__btn');
+var cards = document.querySelectorAll('.cruises__item'); // buttons.forEach((button) => {
+//   button.addEventListener('focus', () => {
+//     console.log('1');
+//   });
+// });
+
+function focus() {
+  var _loop = function _loop(i) {
+    buttons[i].addEventListener('focus', function () {
+      cards[i].classList.add('cruises__item--opened');
+    });
+    buttons[i].addEventListener('blur', function () {
+      cards[i].classList.remove('cruises__item--opened');
+    });
+  };
+
+  for (var i = 0; i < cards.length; i++) {
+    _loop(i);
+  }
 }
 
 

@@ -69,13 +69,21 @@
   font-weight: 400;
   color: $color-tangora;
 
-  @media (max-width: $vp-767) {
-    font-size: 16px;
-    line-height: 22px;
+  @media (min-width: $vp-1366) {
+    width: 352px;
   }
 
   @media (max-width: $vp-767) {
+    font-size: 16px;
+    line-height: 22px;
     padding: 0 16px;
+  }
+}
+
+.booking__description-space {
+  display: none;
+  @media (max-width: $vp-1365) {
+
   }
 }
 

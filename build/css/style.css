@@ -464,7 +464,7 @@ template {
   color: #F9FBFD;
   width: 303px;
   height: 355px;
-  grid-gap: 18px;
+  grid-gap: 20px;
 }
 
 .form__input {
@@ -492,7 +492,7 @@ template {
   font-size: 18px;
   line-height: 27px;
   font-weight: 500;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .form__header .form__header-space {
@@ -727,6 +727,7 @@ template {
 .intro__photo {
   width: 560px;
   height: 301px;
+  background-image: url("../img/content/penguins-desktop.jpg");
 }
 
 .intro__photo img {
@@ -747,7 +748,7 @@ template {
   line-height: 42px;
   text-align: center;
   padding-top: 125px;
-  margin: 0 0 50px;
+  margin: 0 0 48px;
 }
 
 .advantages__list {
@@ -774,7 +775,7 @@ template {
 }
 
 .advantages__item--ship .advantages__item-header {
-  margin-bottom: 21px;
+  margin-bottom: 12px;
 }
 
 .advantages__item--ship .advantages__item-header::before {
@@ -783,16 +784,16 @@ template {
   width: 27px;
   height: 32px;
   position: absolute;
-  left: 20px;
-  top: 25px;
+  left: 30px;
+  top: 28px;
 }
 
 .advantages__item--ship .advantages__item-description {
-  margin-right: 42px;
+  margin-right: 40px;
 }
 
 .advantages__item--all .advantages__item-header {
-  margin-bottom: 20px;
+  margin-bottom: 7px;
 }
 
 .advantages__item--all .advantages__item-header::before {
@@ -801,27 +802,28 @@ template {
   width: 38px;
   height: 21px;
   position: absolute;
-  left: 20px;
-  top: 30px;
+  left: 30px;
+  top: 34px;
 }
 
 .advantages__item--all .advantages__item-description {
-  margin-right: 50px;
+  margin-right: 46px;
   margin-bottom: 50px;
+  word-wrap: break-word;
 }
 
 .advantages__item--tours .advantages__item-header {
-  margin-bottom: 16px;
+  margin-bottom: 7px;
 }
 
 .advantages__item--tours .advantages__item-header::before {
   content: "";
   background-image: url("../img/svg/icon-tours.svg");
-  width: 38px;
-  height: 21px;
+  width: 41px;
+  height: 15px;
   position: absolute;
-  left: 20px;
-  top: 30px;
+  left: 30px;
+  top: 37px;
 }
 
 .advantages__item--tours .advantages__item-description {
@@ -833,9 +835,7 @@ template {
   font-size: 18px;
   line-height: 27px;
   font-weight: 500;
-  margin: 0;
-  margin-left: 20px;
-  margin-top: 87px;
+  margin: 80px 0 0 30px;
 }
 
 .advantages__item-header::before {
@@ -847,7 +847,7 @@ template {
   margin: 0;
   font-size: 14px;
   line-height: 20px;
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 .cruises__container {
@@ -884,6 +884,7 @@ template {
   display: block;
   position: relative;
   background-color: #89A5F9;
+  margin: 0 auto;
 }
 
 .cruises__item:hover .cruises__name,
@@ -905,36 +906,53 @@ template {
   box-shadow: 1px 4px 35px rgba(1, 28, 64, 0.15);
 }
 
+.cruises__item--opened .cruises__name {
+  position: absolute;
+  z-index: 2;
+  top: 35px;
+  margin: 0;
+  left: 25px;
+}
+
+.cruises__item--opened .cruises__description {
+  display: -ms-grid;
+  display: grid;
+  -webkit-animation: cruises-slider 0.7s 1 both;
+  animation: cruises-slider 0.7s 1 both;
+  -webkit-box-shadow: 1px 4px 35px rgba(1, 28, 64, 0.15);
+  box-shadow: 1px 4px 35px rgba(1, 28, 64, 0.15);
+}
+
 .cruises__item--astoria {
-  background-image: url("../img/content/astoria.jpg");
+  background-image: url("../img/content/astoria-desktop.jpg");
 }
 
 .cruises__item--eline {
-  background-image: url("../img/content/olimpia.jpg");
+  background-image: url("../img/content/olimpia-desktop.jpg");
 }
 
 .cruises__item--odyssey {
-  background-image: url("../img/content/odyssey.jpg");
+  background-image: url("../img/content/odyssey-desktop.jpg");
 }
 
 .cruises__item--atlantis {
-  background-image: url("../img/content/atlantis.jpg");
+  background-image: url("../img/content/atlantis-desktop.jpg");
 }
 
 .cruises__item--olimpia {
-  background-image: url("../img/content/olimpia.jpg");
+  background-image: url("../img/content/olimpia-desktop.jpg");
 }
 
 .cruises__item--avrora {
-  background-image: url("../img/content/avrora.jpg");
+  background-image: url("../img/content/avrora-desktop.jpg");
 }
 
 .cruises__item--lenor {
-  background-image: url("../img/content/lenor.jpg");
+  background-image: url("../img/content/lenor-desktop.jpg");
 }
 
 .cruises__item--minion {
-  background-image: url("../img/content/minion.jpg");
+  background-image: url("../img/content/minion-mobile.jpg");
 }
 
 .cruises__name {
@@ -1043,6 +1061,10 @@ template {
   line-height: 27px;
   font-weight: 400;
   color: #011C40;
+}
+
+.booking__description-space {
+  display: none;
 }
 
 .booking__form {
@@ -1159,16 +1181,18 @@ template {
 }
 
 .social__list {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 23px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 117px;
   height: 100%;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   margin: 0;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .social__item {
@@ -1208,7 +1232,7 @@ template {
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   margin: 0;
-  margin-right: 350px;
+  margin-right: 340px;
 }
 
 .site__item {
@@ -1240,9 +1264,19 @@ template {
   }
 }
 
+@media (min-width: 1366px) {
+  .booking__description {
+    width: 352px;
+  }
+}
+
 @media (max-width: 1365px) {
   .container {
     padding: 0 45px;
+  }
+
+  .form__header {
+    text-align: left;
   }
 
   .page-header {
@@ -1255,8 +1289,13 @@ template {
     height: 310px;
   }
 
+  .advantages__item--ship .advantages__item-header::before {
+    left: 20px;
+    top: 25px;
+  }
+
   .advantages__item--ship .advantages__item-header {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 
   .advantages__item--ship .advantages__item-header::before {
@@ -1267,6 +1306,11 @@ template {
   .advantages__item--ship .advantages__item-description {
     margin-right: 32px;
     margin-bottom: 25px;
+  }
+
+  .advantages__item--all .advantages__item-header::before {
+    left: 20px;
+    top: 29px;
   }
 
   .advantages__item--all .advantages__item-header {
@@ -1280,6 +1324,18 @@ template {
 
   .advantages__item--all .advantages__item-description {
     margin-right: 24px;
+  }
+
+  .advantages__item--tours .advantages__item-header::before {
+    width: 38px;
+    height: 21px;
+    left: 20px;
+    top: 30px;
+  }
+
+  .advantages__item--tours .advantages__item-description {
+    width: 167px;
+    height: 151px;
   }
 
   .advantages__item--tours .advantages__item-header {
@@ -1296,6 +1352,11 @@ template {
 
   .advantages__item-header {
     margin-top: 70px;
+    margin-left: 20px;
+  }
+
+  .advantages__item-description {
+    margin-left: 19px;
   }
 
   .cruises__list {
@@ -1303,9 +1364,36 @@ template {
     grid-template-columns: 1fr 1fr;
   }
 
-  .cruises__item {
-    width: 309px;
-    margin: 0 auto;
+  .cruises__item--astoria {
+    background-image: url("../img/content/astoria.jpg");
+  }
+
+  .cruises__item--eline {
+    background-image: url("../img/content/olimpia.jpg");
+  }
+
+  .cruises__item--odyssey {
+    background-image: url("../img/content/odyssey.jpg");
+  }
+
+  .cruises__item--atlantis {
+    background-image: url("../img/content/atlantis.jpg");
+  }
+
+  .cruises__item--olimpia {
+    background-image: url("../img/content/olimpia.jpg");
+  }
+
+  .cruises__item--avrora {
+    background-image: url("../img/content/avrora.jpg");
+  }
+
+  .cruises__item--lenor {
+    background-image: url("../img/content/lenor.jpg");
+  }
+
+  .cruises__item--minion {
+    background-image: url("../img/content/minion.jpg");
   }
 
   .cruises__description {
@@ -1313,8 +1401,24 @@ template {
     height: 291px;
   }
 
+  .page-footer__container {
+    padding-top: 53px;
+    padding-bottom: 50px;
+  }
+
+  .social__list {
+    width: 87px;
+  }
+
   .site__list {
     margin-right: 87px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cruises__item {
+    width: 309px;
+    margin: 0 auto;
   }
 }
 
@@ -1373,6 +1477,7 @@ template {
   .intro__photo {
     width: 324px;
     height: 264px;
+    background-image: url("../img/content/penguins-tablet.jpg");
   }
 
   .advantages {
@@ -1391,7 +1496,7 @@ template {
   }
 
   .cruises__header {
-    margin-top: 90px;
+    margin-top: 91px;
     font-size: 26px;
     line-height: 39px;
   }
@@ -1401,8 +1506,13 @@ template {
     left: 35px;
   }
 
+  .cruises__item--opened .cruises__name {
+    left: 35px;
+  }
+
   .cruises__name {
-    margin-top: 338px;
+    margin-top: 332px;
+    margin-left: 35px;
   }
 
   .cruises__btn {
@@ -1446,7 +1556,7 @@ template {
   }
 
   .contacts__info {
-    margin-top: 72px;
+    margin-top: 66px;
   }
 
   .contacts__info-adress {
@@ -1455,11 +1565,6 @@ template {
 
   .page-footer ul {
     margin-bottom: 5px;
-  }
-
-  .page-footer__container {
-    padding-top: 53px;
-    padding-bottom: 50px;
   }
 
   .page-footer__logo {
@@ -1485,7 +1590,7 @@ template {
   }
 
   .site__item {
-    margin-right: 19px;
+    margin-right: 25px;
   }
 
   .site__item a {
@@ -1504,11 +1609,14 @@ template {
     padding: 35px 30px 45px;
     width: 230px;
     height: 380px;
+    grid-gap: 18px;
   }
 
   .form__header {
     line-height: 25px;
     padding: 0 7px;
+    text-align: center;
+    margin: 0 0 10px;
   }
 
   .form__header .form__header-space {
@@ -1539,12 +1647,12 @@ template {
 
   .page-header__container {
     padding-right: 0;
+    padding-left: 0;
   }
 
   .page-header__intro {
     text-align: left;
-    position: absolute;
-    top: 175px;
+    margin-left: 15px;
   }
 
   .page-header__header {
@@ -1572,6 +1680,7 @@ template {
     background-image: url("../img/svg/logo-mobile.svg");
     width: 42px;
     height: 22px;
+    margin-left: 15px;
   }
 
   .main-nav__list {
@@ -1605,14 +1714,15 @@ template {
 
   .main-nav--opened {
     padding-top: 0;
-    position: absolute;
     right: 0;
     z-index: 2;
+    margin-bottom: 0;
   }
 
   .main-nav--opened .main-nav__list-wrapper {
     background-color: rgba(0, 43, 102, 0.5);
     padding-left: 35px;
+    width: 100%;
   }
 
   .main-nav--opened .main-nav__logo {
@@ -1623,6 +1733,7 @@ template {
     top: 20px;
     position: absolute;
     right: 228px;
+    margin-left: 0;
   }
 
   .main-nav--opened .main-nav__list {
@@ -1657,7 +1768,7 @@ template {
   }
 
   .intro {
-    padding: 57px 0 58px;
+    padding: 57px 0 65px;
   }
 
   .intro__container {
@@ -1672,7 +1783,7 @@ template {
   }
 
   .intro__description {
-    margin-bottom: 40px;
+    margin-bottom: 33px;
   }
 
   .intro__photo {
@@ -1680,6 +1791,7 @@ template {
     width: 290px;
     height: 186px;
     margin: 0 auto;
+    background-image: url("../img/content/penguins-mobile.jpg");
   }
 
   .advantages {
@@ -1705,12 +1817,29 @@ template {
     margin-bottom: 30px;
   }
 
+  .advantages__item--ship .advantages__item-header {
+    margin-bottom: 9px;
+  }
+
   .advantages__item--ship .advantages__item-description {
     margin-right: 15px;
   }
 
+  .advantages__item--all .advantages__item-header {
+    margin-bottom: 9px;
+  }
+
   .advantages__item--all .advantages__item-description {
-    margin-right: 47px;
+    margin-right: 51px;
+  }
+
+  .advantages__item--tours .advantages__item-header {
+    margin-bottom: 10px;
+  }
+
+  .advantages__item--tours .advantages__item-description {
+    width: 233px;
+    height: 91px;
   }
 
   .advantages__item--tours .advantages__item-description {
@@ -1719,6 +1848,7 @@ template {
 
   .advantages__item-header {
     margin-top: 0;
+    margin-bottom: 8px;
     padding-top: 69px;
     line-height: 25px;
     padding-right: 70px;
@@ -1753,9 +1883,47 @@ template {
     padding-top: 0;
   }
 
+  .cruises__item--opened .cruises__name {
+    left: 25px;
+    padding-top: 0;
+  }
+
+  .cruises__item--astoria {
+    background-image: url("../img/content/astoria-mobile.jpg");
+  }
+
+  .cruises__item--eline {
+    background-image: url("../img/content/olimpia-mobile.jpg");
+  }
+
+  .cruises__item--odyssey {
+    background-image: url("../img/content/odyssey-mobile.jpg");
+  }
+
+  .cruises__item--atlantis {
+    background-image: url("../img/content/atlantis-mobile.jpg");
+  }
+
+  .cruises__item--olimpia {
+    background-image: url("../img/content/olimpia-mobile.jpg");
+  }
+
+  .cruises__item--avrora {
+    background-image: url("../img/content/avrora-mobile.jpg");
+  }
+
+  .cruises__item--lenor {
+    background-image: url("../img/content/lenor-mobile.jpg");
+  }
+
+  .cruises__item--minion {
+    background-image: url("../img/content/minion-mobile.jpg");
+  }
+
   .cruises__name {
-    padding-top: 348px;
+    padding-top: 342px;
     margin-top: 0;
+    margin-left: 26px;
   }
 
   .cruises__description {
@@ -1785,9 +1953,6 @@ template {
   .booking__description {
     font-size: 16px;
     line-height: 22px;
-  }
-
-  .booking__description {
     padding: 0 16px;
   }
 
@@ -1833,7 +1998,7 @@ template {
     margin-right: 0;
     width: 42px;
     height: 22px;
-    margin-bottom: 30px;
+    margin-bottom: 27px;
   }
 
   .page-footer-nav {
@@ -1847,7 +2012,7 @@ template {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-    grid-gap: 17px;
+    grid-gap: 23px;
   }
 
   .site__list {

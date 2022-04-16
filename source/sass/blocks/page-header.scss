@@ -20,6 +20,7 @@
 .page-header__container {
   @media (max-width: $vp-767) {
     padding-right: 0;
+    padding-left: 0;
   }
 }
 
@@ -32,8 +33,7 @@
 
   @media (max-width: $vp-767) {
     text-align: left;
-    position: absolute;
-    top: 175px;
+    margin-left: 15px;
   }
 }
 

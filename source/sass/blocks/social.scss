@@ -1,14 +1,18 @@
 .social__list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 23px;
+  display: flex;
+  width: 117px;
   height: 100%;
   align-items: center;
   margin: 0;
+  justify-content: space-between;
+
+  @media (max-width: $vp-1365) {
+    width: 87px;
+  }
 
   @media (max-width: $vp-767) {
     width: max-content;
-    grid-gap: 17px;
+    grid-gap: 23px;
   }
 }
 
