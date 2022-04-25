@@ -67,12 +67,12 @@
 .intro__photo {
   width: 560px;
   height: 301px;
-  background-image: url("../img/content/penguins-desktop.jpg");
+  background-image: url("../img/content/penguins-desktop.WebP");
 
   @media (max-width: $vp-1023) {
     width: 324px;
     height: 264px;
-    background-image: url("../img/content/penguins-tablet.jpg");
+    background-image: url("../img/content/penguins-tablet.WebP");
   }
 
   @media (max-width: $vp-767) {
@@ -80,7 +80,7 @@
     width: 290px;
     height: 186px;
     margin: 0 auto;
-    background-image: url("../img/content/penguins-mobile.jpg");
+    background-image: url("../img/content/penguins-mobile.WebP");
   }
 
   img {

@@ -208,9 +208,11 @@ __webpack_require__.r(__webpack_exports__);
 function toggleNav() {
   var navBlock = document.querySelector('.main-nav');
   var toggleButton = document.querySelector('.main-nav__toggle');
+  var body = document.querySelector('body');
   navBlock.classList.remove('.main-nav--nojs');
   toggleButton.addEventListener('click', function () {
     navBlock.classList.toggle('main-nav--opened');
+    body.classList.toggle('scroll-lock');
   });
 }
 
@@ -233,33 +235,41 @@ function validate() {
   var re = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
 
   function check(item, rule) {
-    item.addEventListener('input', function () {
-      if (rule.test(item.value)) {
-        item.classList.remove('form__input--error');
-        item.classList.add('form__input--good');
-      } else {
-        item.classList.remove('form__input--good');
-        item.classList.add('form__input--error');
-      }
-    });
+    if (rule.test(item.value)) {
+      item.classList.remove('form__input--error');
+      item.classList.add('form__input--good');
+      return true;
+    } else {
+      item.classList.remove('form__input--good');
+      item.classList.add('form__input--error');
+      return false;
+    }
   }
 
+  var form = document.querySelector('.booking__form');
   var tel = document.querySelector('.form__input--tel');
   var email = document.querySelector('.form__input--email');
   var buttonSumbit = document.querySelector('.form__btn');
   var checkbox = document.querySelector('.booking__checkbox ');
   var checkboxContainer = document.querySelector('.form__checkbox--container');
-  buttonSumbit.addEventListener('click', function (e) {
+  buttonSumbit.addEventListener('click', function () {
     if (checkbox.checked) {
       checkboxContainer.classList.remove('form__checkbox--container-good');
       return;
     }
 
-    e.preventDefault();
     checkboxContainer.classList.add('form__checkbox--container-good');
   });
-  check(tel, regex);
-  check(email, re);
+  form.addEventListener('submit', function (e) {
+    check(tel, regex);
+    check(email, re);
+
+    if (checkbox.checked && check(tel, regex) && check(email, re)) {
+      return;
+    } else {
+      e.preventDefault();
+    }
+  });
 }
 
 
@@ -267,3 +277,4 @@ function validate() {
 /***/ })
 
 /******/ });
+//# sourceMappingURL=main.js.map

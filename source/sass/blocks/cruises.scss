@@ -82,7 +82,7 @@
     .cruises__name {
       position: absolute;
       z-index: 2;
-      top: 35px;
+      top: 29px;
       margin: 0;
       left: 25px;
 
@@ -252,7 +252,7 @@
   width: fit-content;
   height: 301px;
   opacity: 0;
-  padding: 75px 25px 0;
+  padding: 69px 25px 16px;
 
   div {
     height: fit-content;
@@ -274,27 +274,30 @@
   }
 
   @media (max-width: $vp-1365) {
-    padding: 73px 36px 22px 35px;
+    padding: 69px 36px 26px 35px;;
     height: 291px;
   }
 
   @media (max-width: $vp-767) {
-    padding: 73px 25px 22px;
+    padding: 69px 25px 26px;
   }
 }
 .cruises__btn {
   padding: 10px 46px 9px 47px;
   height: fit-content;
-  margin-bottom: auto;
+  margin-bottom: 6px;
+  margin-top: 10px;
 
   @media (max-width: $vp-1023) {
     padding-left: 61px;
     padding-right: 61px;
+    margin-top: 15px;
   }
 
   @media (max-width: $vp-767) {
     padding-left: 51px;
     padding-right: 52px;
+    margin-bottom: -3px;
   }
 }
 

@@ -454,7 +454,7 @@ template {
   padding: 0 103px;
 }
 
-.form {
+form {
   padding: 50px;
   padding-bottom: 55px;
   padding-top: 45px;
@@ -465,9 +465,24 @@ template {
   width: 303px;
   height: 355px;
   grid-gap: 20px;
+  margin-top: 50px;
 }
 
-.form__input {
+form h3 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  width: 303px;
+  height: 54px;
+}
+
+form h3 br {
+  display: none;
+}
+
+form input:not([type="checkbox"]) {
   padding: 13px 16px;
   height: 17px;
   font-weight: 400;
@@ -479,41 +494,14 @@ template {
   outline: none;
 }
 
-.form__input--error {
-  border: 1px solid #ff1553;
-}
-
-.form__input--good {
-  border: 1px solid #00FF00;
-}
-
-.form__header {
-  margin: 0;
-  font-size: 18px;
-  line-height: 27px;
-  font-weight: 500;
-  margin-bottom: 6px;
-}
-
-.form__header .form__header-space {
-  display: none;
-}
-
-.form__checkbox--container {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.form__checkbox {
+form input[type="checkbox"] {
   position: relative;
   width: 18px;
   height: 18px;
   margin-bottom: 10px;
 }
 
-.form__checkbox::before {
+form input[type="checkbox"]::before {
   content: "";
   width: 18px;
   height: 18px;
@@ -521,14 +509,21 @@ template {
   background-color: #F9FBFD;
 }
 
-.form__checkbox:checked::before {
+form input[type="checkbox"]:checked::before {
   background-image: url("../img/svg/checkbox.svg");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
 }
 
-.form__checkbox + span {
+form label {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+form input[type="checkbox"] + span {
   font-weight: 400;
   font-size: 10px;
   line-height: 13px;
@@ -536,15 +531,10 @@ template {
   margin-top: 3px;
 }
 
-.form__btn {
+form button {
   border: none;
   height: 43px;
   padding: 0 89px 0 90px;
-}
-
-.form__checkbox--container-good {
-  -webkit-box-shadow: 0 0 8px #ff1553;
-  box-shadow: 0 0 8px #ff1553;
 }
 
 .btn {
@@ -727,7 +717,7 @@ template {
 .intro__photo {
   width: 560px;
   height: 301px;
-  background-image: url("../img/content/penguins-desktop.jpg");
+  background-image: url("../img/content/penguins-desktop.WebP");
 }
 
 .intro__photo img {
@@ -891,7 +881,7 @@ template {
 .cruises__item:focus .cruises__name {
   position: absolute;
   z-index: 2;
-  top: 35px;
+  top: 29px;
   margin: 0;
   left: 25px;
 }
@@ -973,7 +963,7 @@ template {
   width: fit-content;
   height: 301px;
   opacity: 0;
-  padding: 75px 25px 0;
+  padding: 69px 25px 16px;
 }
 
 .cruises__description div {
@@ -1002,7 +992,8 @@ template {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin-bottom: auto;
+  margin-bottom: 6px;
+  margin-top: 10px;
 }
 
 @-webkit-keyframes cruises-slider {
@@ -1065,10 +1056,6 @@ template {
 
 .booking__description-space {
   display: none;
-}
-
-.booking__form {
-  margin-top: 50px;
 }
 
 .contatcs__container {
@@ -1210,19 +1197,16 @@ template {
 .social__item--twi {
   width: 20px;
   height: 16px;
-  background-image: url("../img/svg/icon-twi.svg");
 }
 
 .social__item--insta {
   width: 20px;
   height: 20px;
-  background-image: url("../img/svg/icon-insta.svg");
 }
 
 .social__item--meta {
   width: 11px;
   height: 20px;
-  background-image: url("../img/svg/icon-facebook.svg");
 }
 
 .site__list {
@@ -1251,6 +1235,93 @@ template {
   font-weight: 400;
 }
 
+.sprite {
+  display: none;
+}
+
+form {
+  padding: 50px;
+  padding-bottom: 55px;
+  padding-top: 45px;
+  display: -ms-grid;
+  display: grid;
+  background-color: #011C40;
+  color: #F9FBFD;
+  width: 303px;
+  height: 355px;
+  grid-gap: 20px;
+  margin-top: 50px;
+}
+
+form h3 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  width: 303px;
+  height: 54px;
+}
+
+form h3 br {
+  display: none;
+}
+
+form input:not([type="checkbox"]) {
+  padding: 13px 16px;
+  height: 17px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(1, 28, 64, 0.7);
+  border: none;
+  border-radius: 0;
+  outline: none;
+}
+
+form input[type="checkbox"] {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  margin-bottom: 10px;
+}
+
+form input[type="checkbox"]::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  background-color: #F9FBFD;
+}
+
+form input[type="checkbox"]:checked::before {
+  background-image: url("../img/svg/checkbox.svg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+form label {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+form input[type="checkbox"] + span {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  margin-left: 5px;
+  margin-top: 3px;
+}
+
+form button {
+  border: none;
+  height: 43px;
+  padding: 0 89px 0 90px;
+}
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
@@ -1275,7 +1346,9 @@ template {
     padding: 0 45px;
   }
 
-  .form__header {
+  form h3 {
+    width: auto;
+    height: auto;
     text-align: left;
   }
 
@@ -1397,7 +1470,7 @@ template {
   }
 
   .cruises__description {
-    padding: 73px 36px 22px 35px;
+    padding: 69px 36px 26px 35px;
     height: 291px;
   }
 
@@ -1411,7 +1484,13 @@ template {
   }
 
   .site__list {
-    margin-right: 87px;
+    margin-right: auto;
+  }
+
+  form h3 {
+    width: auto;
+    height: auto;
+    text-align: left;
   }
 }
 
@@ -1423,6 +1502,10 @@ template {
 }
 
 @media (max-width: 1023px) {
+  form {
+    margin: 53px auto 0;
+  }
+
   .page-header__intro {
     margin-left: 0;
   }
@@ -1477,7 +1560,7 @@ template {
   .intro__photo {
     width: 324px;
     height: 264px;
-    background-image: url("../img/content/penguins-tablet.jpg");
+    background-image: url("../img/content/penguins-tablet.WebP");
   }
 
   .advantages {
@@ -1518,6 +1601,7 @@ template {
   .cruises__btn {
     padding-left: 61px;
     padding-right: 61px;
+    margin-top: 15px;
   }
 
   .booking {
@@ -1539,10 +1623,6 @@ template {
     margin-bottom: 5px;
     font-size: 34px;
     line-height: 51px;
-  }
-
-  .booking__form {
-    margin: 53px auto 0;
   }
 
   .contatcs__container {
@@ -1597,6 +1677,10 @@ template {
     font-size: 12px;
     line-height: 15px;
   }
+
+  form {
+    margin: 53px auto 0;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1605,37 +1689,38 @@ template {
     margin: 0;
   }
 
-  .form {
+  form {
     padding: 35px 30px 45px;
     width: 230px;
     height: 380px;
     grid-gap: 18px;
+    margin-top: 34px;
   }
 
-  .form__header {
+  form h3 {
     line-height: 25px;
     padding: 0 7px;
     text-align: center;
     margin: 0 0 10px;
   }
 
-  .form__header .form__header-space {
+  form h3 br {
     display: block;
   }
 
-  .form__checkbox::before {
+  form input[type="checkbox"]::before {
     width: 20px;
     height: 20px;
   }
 
-  .form__checkbox + span {
+  form input[type="checkbox"] + span {
     margin-top: 0;
     text-align: left;
     margin-right: 45px;
     margin-left: 17px;
   }
 
-  .form__btn {
+  form button {
     padding: 0 53px;
     margin-top: 10px;
   }
@@ -1728,12 +1813,10 @@ template {
   .main-nav--opened .main-nav__logo {
     background-image: url("../img/svg/logo-mobile-open.svg");
     z-index: 3;
-    margin-left: 35px;
     background-repeat: no-repeat;
     top: 20px;
     position: absolute;
     right: 228px;
-    margin-left: 0;
   }
 
   .main-nav--opened .main-nav__list {
@@ -1791,7 +1874,7 @@ template {
     width: 290px;
     height: 186px;
     margin: 0 auto;
-    background-image: url("../img/content/penguins-mobile.jpg");
+    background-image: url("../img/content/penguins-mobile.WebP");
   }
 
   .advantages {
@@ -1927,12 +2010,13 @@ template {
   }
 
   .cruises__description {
-    padding: 73px 25px 22px;
+    padding: 69px 25px 26px;
   }
 
   .cruises__btn {
     padding-left: 51px;
     padding-right: 52px;
+    margin-bottom: -3px;
   }
 
   .booking {
@@ -1954,10 +2038,6 @@ template {
     font-size: 16px;
     line-height: 22px;
     padding: 0 16px;
-  }
-
-  .booking__form {
-    margin-top: 34px;
   }
 
   .contatcs__container {
@@ -2026,5 +2106,41 @@ template {
 
   .site__item:last-child {
     margin-bottom: 27px;
+  }
+
+  form {
+    padding: 35px 30px 45px;
+    width: 230px;
+    height: 380px;
+    grid-gap: 18px;
+    margin-top: 34px;
+  }
+
+  form h3 {
+    line-height: 25px;
+    padding: 0 7px;
+    text-align: center;
+    margin: 0 0 10px;
+  }
+
+  form h3 br {
+    display: block;
+  }
+
+  form input[type="checkbox"]::before {
+    width: 20px;
+    height: 20px;
+  }
+
+  form input[type="checkbox"] + span {
+    margin-top: 0;
+    text-align: left;
+    margin-right: 45px;
+    margin-left: 17px;
+  }
+
+  form button {
+    padding: 0 53px;
+    margin-top: 10px;
   }
 }
