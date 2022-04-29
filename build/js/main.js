@@ -246,12 +246,14 @@ function validate() {
     }
   }
 
+  var name = document.querySelector('.form__input--name');
   var form = document.querySelector('.booking__form');
   var tel = document.querySelector('.form__input--tel');
   var email = document.querySelector('.form__input--email');
   var buttonSumbit = document.querySelector('.form__btn');
   var checkbox = document.querySelector('.booking__checkbox ');
   var checkboxContainer = document.querySelector('.form__checkbox--container');
+  var alertWrapper = document.querySelector('.alert');
   buttonSumbit.addEventListener('click', function () {
     if (checkbox.checked) {
       checkboxContainer.classList.remove('form__checkbox--container-good');
@@ -265,10 +267,17 @@ function validate() {
     check(email, re);
 
     if (checkbox.checked && check(tel, regex) && check(email, re)) {
-      return;
-    } else {
-      e.preventDefault();
+      tel.value = '';
+      email.value = '';
+      name.value = '';
+      alertWrapper.style.display = 'block';
+      alertWrapper.style.display = 'block';
+      setTimeout(function () {
+        alertWrapper.style.display = 'none';
+      }, 1000);
     }
+
+    e.preventDefault();
   });
 }
 

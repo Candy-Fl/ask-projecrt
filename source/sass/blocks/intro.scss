@@ -68,11 +68,13 @@
   width: 560px;
   height: 301px;
   background-image: url("../img/content/penguins-desktop.WebP");
+  background-image: url("../img/content/penguins-desktop.jpg");
 
   @media (max-width: $vp-1023) {
     width: 324px;
     height: 264px;
     background-image: url("../img/content/penguins-tablet.WebP");
+    background-image: url("../img/content/penguins-tablet.jpg");
   }
 
   @media (max-width: $vp-767) {
@@ -81,6 +83,7 @@
     height: 186px;
     margin: 0 auto;
     background-image: url("../img/content/penguins-mobile.WebP");
+    background-image: url("../img/content/penguins-mobile.jpg");
   }
 
   img {

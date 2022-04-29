@@ -5,6 +5,7 @@
   color: $color-alice-blue;
   background-size: cover;
   background-color: $color-prussian-blue;
+  position: relative;
 
   @media (max-width: $vp-1365) {
     background-image: url('../img/content/main-intro-background-tablet.jpg');

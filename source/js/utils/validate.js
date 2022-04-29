@@ -14,12 +14,14 @@ function validate() {
     }
   }
 
+  const name = document.querySelector('.form__input--name');
   const form = document.querySelector('.booking__form');
   const tel = document.querySelector('.form__input--tel');
   const email = document.querySelector('.form__input--email');
   const buttonSumbit = document.querySelector('.form__btn');
   const checkbox = document.querySelector('.booking__checkbox ');
   const checkboxContainer = document.querySelector('.form__checkbox--container');
+  const alertWrapper = document.querySelector('.alert');
 
   buttonSumbit.addEventListener('click', () => {
     if (checkbox.checked) {
@@ -33,10 +35,16 @@ function validate() {
     check(tel, regex);
     check(email, re);
     if (checkbox.checked && check(tel, regex) && check(email, re)) {
-      return;
-    } else {
-      e.preventDefault();
+      tel.value = '';
+      email.value = '';
+      name.value = '';
+      alertWrapper.style.display = 'block';
+      alertWrapper.style.display = 'block';
+      setTimeout(() => {
+        alertWrapper.style.display = 'none';
+      }, 1000);
     }
+    e.preventDefault();
   });
 }
 

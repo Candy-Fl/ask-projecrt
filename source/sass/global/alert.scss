@@ -1,0 +1,17 @@
+.alert__container {
+  overflow: hidden
+}
+
+.alert {
+  background-color: $color-green-sucsess;
+  width: 200px;
+  height: 50px;
+  position: fixed;
+  right: 50vh;
+  left: 50vh;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 2px 4px 35px $color-cruise-shadow;
+  top: 0;
+  display: none;
+}
