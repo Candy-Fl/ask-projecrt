@@ -148,10 +148,14 @@ __webpack_require__.r(__webpack_exports__);
 function closeNav() {
   var nav = document.querySelector('.main-nav');
   var links = document.querySelectorAll('.main-nav__link');
+  var overlay = document.querySelector('.main-nav__list-overlay');
   links.forEach(function (link) {
     link.addEventListener('click', function () {
       nav.classList.remove('main-nav--opened');
     });
+  });
+  overlay.addEventListener('click', function () {
+    nav.classList.remove('main-nav--opened');
   });
 }
 
@@ -195,6 +199,39 @@ function focus() {
 
 /***/ }),
 
+/***/ "./js/utils/send-form.js":
+/*!*******************************!*\
+  !*** ./js/utils/send-form.js ***!
+  \*******************************/
+/*! exports provided: sendData */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sendData", function() { return sendData; });
+var sendData = function sendData(body) {
+  var alertWrapper = document.querySelector('.alert');
+  console.log(JSON.stringify(body));
+  fetch('https://echo.htmlacademy.ru/', {
+    method: 'POST',
+    body: body
+  }).then(function (response) {
+    if (response.ok) {
+      alertWrapper.style.display = 'block';
+      alertWrapper.style.display = 'block';
+      setTimeout(function () {
+        alertWrapper.style.display = 'none';
+      }, 1000);
+    }
+  }).catch(function (err) {
+    console.log(err);
+  });
+};
+
+
+
+/***/ }),
+
 /***/ "./js/utils/toggle-nav.js":
 /*!********************************!*\
   !*** ./js/utils/toggle-nav.js ***!
@@ -209,10 +246,14 @@ function toggleNav() {
   var navBlock = document.querySelector('.main-nav');
   var toggleButton = document.querySelector('.main-nav__toggle');
   var body = document.querySelector('body');
+  var footer = document.querySelector('footer');
+  var main = document.querySelector('main');
   navBlock.classList.remove('.main-nav--nojs');
   toggleButton.addEventListener('click', function () {
     navBlock.classList.toggle('main-nav--opened');
     body.classList.toggle('scroll-lock');
+    main.style.display = main.style.display === 'none' ? 'block' : 'none';
+    footer.style.display = footer.style.display === 'none' ? 'block' : 'none';
   });
 }
 
@@ -230,54 +271,59 @@ function toggleNav() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "validate", function() { return validate; });
+/* harmony import */ var _send_form__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./send-form */ "./js/utils/send-form.js");
+
+
 function validate() {
   var regex = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
   var re = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
 
   function check(item, rule) {
     if (rule.test(item.value)) {
-      item.classList.remove('form__input--error');
-      item.classList.add('form__input--good');
+      item.style.outline = '1px solid #4BB543';
       return true;
     } else {
-      item.classList.remove('form__input--good');
-      item.classList.add('form__input--error');
+      item.style.outline = '1px solid red';
       return false;
     }
   }
 
-  var name = document.querySelector('.form__input--name');
-  var form = document.querySelector('.booking__form');
+  var formButton = document.querySelector('.form__btn');
   var tel = document.querySelector('.form__input--tel');
   var email = document.querySelector('.form__input--email');
-  var buttonSumbit = document.querySelector('.form__btn');
   var checkbox = document.querySelector('.booking__checkbox ');
-  var checkboxContainer = document.querySelector('.form__checkbox--container');
-  var alertWrapper = document.querySelector('.alert');
-  buttonSumbit.addEventListener('click', function () {
+  var name = document.querySelector('.form__input--name');
+
+  function checkboxCheck() {
     if (checkbox.checked) {
-      checkboxContainer.classList.remove('form__checkbox--container-good');
+      checkbox.style.outline = '1px solid #4BB543';
       return;
     }
 
-    checkboxContainer.classList.add('form__checkbox--container-good');
-  });
-  form.addEventListener('submit', function (e) {
+    checkbox.style.outline = '1px solid red';
+  }
+
+  tel.addEventListener('keyup', function () {
     check(tel, regex);
+  });
+  email.addEventListener('keyup', function () {
     check(email, re);
+  });
+  formButton.addEventListener('click', function (e) {
+    checkboxCheck();
 
     if (checkbox.checked && check(tel, regex) && check(email, re)) {
-      tel.value = '';
-      email.value = '';
+      e.preventDefault();
+      Object(_send_form__WEBPACK_IMPORTED_MODULE_0__["sendData"])({
+        name: name.value,
+        email: email.value,
+        phone: tel.value
+      });
       name.value = '';
-      alertWrapper.style.display = 'block';
-      alertWrapper.style.display = 'block';
-      setTimeout(function () {
-        alertWrapper.style.display = 'none';
-      }, 1000);
+      email.value = '';
+      tel.value = '';
+      checkbox.checked = false;
     }
-
-    e.preventDefault();
   });
 }
 
