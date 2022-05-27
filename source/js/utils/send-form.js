@@ -1,6 +1,5 @@
 const sendData = (body) => {
   const alertWrapper = document.querySelector('.alert');
-  console.log(JSON.stringify(body));
   fetch(
     'https://echo.htmlacademy.ru/',
     {
